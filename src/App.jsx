@@ -10,7 +10,9 @@ function App() {
     <section id="center">
       <div>
         <Hero />
-        <h1>Hi My name is Simret</h1>
+        <h1 className="text-5xl font-bold text-center mt-10">
+  Simret Portfolio
+</h1>
       </div>
     </section>
   );
