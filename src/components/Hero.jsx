@@ -18,10 +18,11 @@ function Hero() {
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <a
             href="/Simret-Negash-CV.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition"
           >
-            Download CV
+            View CV
           </a>
 
           <a
