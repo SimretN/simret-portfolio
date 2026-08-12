@@ -11,21 +11,17 @@ function Hero() {
           Hello, I'm Simret 👋
         </p>
 
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
           Full-Stack Developer
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          I build modern, responsive web applications using JavaScript,
-          React, Node.js and other modern web technologies.
-        </p>
-
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <a
-            href="#projects"
+            href="/Simret-Negash-CV.pdf"
+            download
             className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition"
           >
-            View My Projects
+            Download CV
           </a>
 
           <a
