@@ -16,8 +16,9 @@ function Hero() {
         </h1>
 
         <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {/* View CV */}
           <a
-            href="/Simret-Negash-CV.pdf"
+            href="/Simret-Negash-CV-English.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition"
@@ -25,6 +26,7 @@ function Hero() {
             View CV
           </a>
 
+          {/* Contact */}
           <a
             href="#contact"
             className="border border-gray-300 px-6 py-3 rounded-lg font-medium text-gray-800 hover:border-purple-600 hover:text-purple-600 transition"
@@ -33,6 +35,7 @@ function Hero() {
           </a>
         </div>
 
+        {/* Social Links */}
         <div className="flex justify-center gap-5 text-2xl">
           <a
             href="https://github.com/SimretN"
@@ -45,7 +48,9 @@ function Hero() {
           </a>
 
           <a
-            href="#"
+            href="https://www.linkedin.com/in/simret-negash"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="text-gray-700 hover:text-purple-600 transition"
           >
