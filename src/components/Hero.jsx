@@ -3,15 +3,16 @@ import profileImage from "../assets/profile/simret-profile.jpg";
 
 function Hero() {
   return (
-    <section id="home" className="px-6 py-12 md:py-16">
+    <section id="home" className="px-5 sm:px-6 py-12 md:py-16">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-12">
-        {/* Left side - Text */}
-        <div className="md:w-[58%] text-center md:text-left">
+
+        {/* Left Side - Text */}
+        <div className="w-full md:w-[58%] text-center md:text-left min-w-0">
           <p className="text-purple-600 font-semibold mb-4">
             Hello, I'm Simret 👋
           </p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-8 md:whitespace-nowrap">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-8 leading-tight md:whitespace-nowrap">
             Full-Stack Web Developer
           </h1>
 
@@ -58,10 +59,9 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right side - Profile Picture */}
-        <div className="md:w-[42%] flex justify-center">
+        {/* Right Side - Profile Picture */}
+        <div className="w-full md:w-[42%] flex justify-center">
           <div className="relative">
-            {/* Purple background decoration */}
             <div className="absolute -inset-3 bg-purple-100 rounded-3xl rotate-3"></div>
 
             <img
@@ -80,6 +80,7 @@ function Hero() {
             />
           </div>
         </div>
+
       </div>
     </section>
   );
