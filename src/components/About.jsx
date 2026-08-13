@@ -1,24 +1,29 @@
 function About() {
   return (
-    <section id="about" className="px-6 py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-purple-600 font-semibold mb-3">About Me</p>
+    <section id="about" className="px-6 py-16 md:py-20 bg-gray-50">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-8 md:mb-10">
+          <p className="text-purple-600 font-semibold mb-2">About Me</p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Full-Stack Developer passionate about building useful web applications
-        </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Get to know me
+          </h2>
+        </div>
 
-        <p className="text-lg text-gray-600 leading-relaxed mb-6">
-          I am a Full-Stack Developer with experience building responsive web
-          applications using JavaScript, React, Node.js, Express, MongoDB and
-          other modern web technologies.
-        </p>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-base md:text-lg text-gray-600 leading-7 md:leading-8">
+            I'm a Full-Stack Developer with experience building modern web
+            applications across both frontend and backend. I enjoy turning ideas
+            into clean, responsive and user-friendly digital solutions.
+          </p>
 
-        <p className="text-lg text-gray-600 leading-relaxed">
-          I enjoy working with both frontend and backend development, creating
-          clean user interfaces, building APIs and turning ideas into complete
-          applications.
-        </p>
+          <p className="text-base md:text-lg text-gray-600 leading-7 md:leading-8 mt-5">
+            I work with technologies such as React, Angular, JavaScript,
+            TypeScript, Node.js, C#/.NET, PHP, MongoDB and MySQL. I enjoy
+            learning new technologies, solving problems and collaborating in
+            agile teams to build reliable applications.
+          </p>
+        </div>
       </div>
     </section>
   );
