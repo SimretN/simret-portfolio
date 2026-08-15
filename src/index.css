@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* =========================
+   LIGHT MODE
+========================= */
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -14,6 +18,7 @@ html {
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
+
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
@@ -23,14 +28,45 @@ html {
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+
+  color-scheme: light;
+
   color: var(--text);
   background: var(--bg);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* =========================
+   MANUAL DARK MODE
+   Activated by ThemeToggle.jsx
+========================= */
+
+html.dark {
+  --text: #d2d5dc;
+  --text-h: #f8fafc;
+  --bg: #16171d;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
+
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+  color-scheme: dark;
+}
+
+/* =========================
+   RESPONSIVE FONT SIZE
+   ORIGINAL CODE
+========================= */
 
 @media (max-width: 1024px) {
   :root {
@@ -38,41 +74,53 @@ html {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
+/* =========================
+   BODY
+========================= */
 
 body {
   margin: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
+
+/* =========================
+   ROOT
+   ORIGINAL LAYOUT
+   DO NOT CHANGE WIDTH
+========================= */
 
 #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
+
   text-align: center;
+
   border-inline: 1px solid var(--border);
+
   min-height: 100svh;
+
   display: flex;
   flex-direction: column;
+
   box-sizing: border-box;
+
+  background: var(--bg);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 
 h1,
 h2 {
@@ -111,6 +159,10 @@ p {
   margin: 0;
 }
 
+/* =========================
+   CODE
+========================= */
+
 code,
 .counter {
   font-family: var(--mono);
@@ -124,4 +176,67 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* =========================
+   DARK MODE COLOR OVERRIDES
+
+   COLORS ONLY.
+   NO SIZE, WIDTH, SPACING,
+   POSITION OR LAYOUT CHANGES.
+========================= */
+
+html.dark .bg-white {
+  background-color: #16171d !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #1d1e25 !important;
+}
+
+html.dark .text-gray-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-gray-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-gray-500 {
+  color: #b4bdc9 !important;
+}
+
+html.dark .border-gray-200 {
+  border-color: #2e303a !important;
+}
+
+html.dark .border-gray-300 {
+  border-color: #454752 !important;
+}
+
+/* Purple background behind profile picture */
+
+html.dark .bg-purple-100 {
+  background-color: rgba(192, 132, 252, 0.18) !important;
+}
+
+/* Light purple tags/cards */
+
+html.dark .bg-purple-50,
+html.dark .bg-purple-100 {
+  background-color: rgba(192, 132, 252, 0.15) !important;
+}
+
+/* Keep social icons visible */
+
+html.dark #social .button-icon {
+  filter: invert(1) brightness(2);
 }
