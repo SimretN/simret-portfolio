@@ -11,7 +11,7 @@ function ThemeToggle() {
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
       title={darkMode ? "Light mode" : "Dark mode"}
       className="
-        fixed
+        absolute
         top-4
         right-4
         z-50
@@ -29,10 +29,9 @@ function ThemeToggle() {
         transition
         hover:border-purple-500
         hover:text-purple-600
+
         sm:top-5
-        sm:right-5
-        sm:h-11
-        sm:w-11
+        sm:right-8
       "
     >
       {darkMode ? <FaSun /> : <FaMoon />}

@@ -3,46 +3,126 @@ import profileImage from "../assets/profile/simret-profile.jpg";
 
 function Hero() {
   return (
-    <section id="home" className="px-5 sm:px-6 py-12 md:py-16">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-12">
+    <section id="home" className="px-5 py-12 sm:px-6 md:py-16">
+      <div
+        className="
+          mx-auto
+          flex
+          max-w-6xl
+          flex-col-reverse
+          items-center
+          justify-between
+          gap-10
 
+          md:max-w-5xl
+          md:flex-row
+          md:gap-8
+
+          xl:max-w-6xl
+        "
+      >
         {/* Left Side - Text */}
-        <div className="w-full md:w-[58%] text-center md:text-left min-w-0">
-          <p className="text-purple-600 font-semibold mb-4">
+        <div
+          className="
+            w-full
+            min-w-0
+            text-center
+
+            md:w-[60%]
+            md:text-left
+          "
+        >
+          <p className="mb-4 font-semibold text-purple-600">
             Hello, I'm Simret 👋
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-8 leading-tight md:whitespace-nowrap">
+          <h1
+            className="
+              mb-8
+              text-3xl
+              font-bold
+              leading-tight
+              text-gray-900
+
+              sm:text-4xl
+
+              md:text-4xl
+              md:whitespace-nowrap
+
+              lg:text-5xl
+
+              xl:text-5xl
+            "
+          >
             Full-Stack Web Developer
           </h1>
 
           {/* Buttons */}
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+          <div
+            className="
+              mb-8
+              flex
+              flex-wrap
+              justify-center
+              gap-4
+
+              md:justify-start
+            "
+          >
             <a
               href="/Simret-Negash-CV-English.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition"
+              className="
+                rounded-lg
+                bg-purple-600
+                px-6
+                py-3
+                font-medium
+                text-white
+                transition
+                hover:bg-purple-700
+              "
             >
               View CV
             </a>
 
             <a
               href="#contact"
-              className="border border-gray-300 px-6 py-3 rounded-lg font-medium text-gray-800 hover:border-purple-600 hover:text-purple-600 transition"
+              className="
+                rounded-lg
+                border
+                border-gray-300
+                px-6
+                py-3
+                font-medium
+                text-gray-800
+                transition
+                hover:border-purple-600
+                hover:text-purple-600
+              "
             >
               Contact Me
             </a>
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center md:justify-start gap-5 text-2xl">
+          <div
+            className="
+              flex
+              justify-center
+              gap-5
+              text-2xl
+
+              md:justify-start
+            "
+          >
             <a
               href="https://github.com/SimretN"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-gray-700 hover:text-purple-600 transition"
+              className="text-gray-700 transition hover:text-purple-600"
             >
               <FaGithub />
             </a>
@@ -52,7 +132,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-gray-700 hover:text-purple-600 transition"
+              className="text-gray-700 transition hover:text-purple-600"
             >
               <FaLinkedin />
             </a>
@@ -60,27 +140,46 @@ function Hero() {
         </div>
 
         {/* Right Side - Profile Picture */}
-        <div className="w-full md:w-[42%] flex justify-center">
+        <div
+          className="
+            flex
+            w-full
+            justify-center
+
+            md:w-[40%]
+            md:justify-end
+          "
+        >
           <div className="relative">
-            <div className="absolute -inset-3 bg-purple-100 rounded-3xl rotate-3"></div>
+            {/* Purple decoration */}
+            <div className="absolute -inset-3 rotate-3 rounded-3xl bg-purple-100"></div>
 
             <img
               src={profileImage}
               alt="Simret Negash"
               className="
                 relative
-                w-52 h-64
-                sm:w-56 sm:h-72
-                md:w-64 md:h-80
-                lg:w-72 lg:h-80
-                object-cover
+                h-64
+                w-52
                 rounded-3xl
+                object-cover
                 shadow-lg
+
+                sm:h-72
+                sm:w-56
+
+                md:h-72
+                md:w-60
+
+                lg:h-76
+                lg:w-64
+
+                xl:h-80
+                xl:w-68
               "
             />
           </div>
         </div>
-
       </div>
     </section>
   );
