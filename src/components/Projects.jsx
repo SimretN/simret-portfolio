@@ -15,7 +15,7 @@ function Projects() {
       description:
         "A full-stack real estate application where users can create accounts, manage property listings, upload images, search properties and contact landlords.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase"],
-      github: "https://github.com/SimretN",
+      github: "https://github.com/SimretN/u09-fullstack-js-SimretN",
       live: "https://fabiestate.netlify.app",
     },
     {
@@ -24,7 +24,7 @@ function Projects() {
       description:
         "A music-focused web application created as a school project with a modern interface and interactive music-related features.",
       technologies: ["JavaScript", "React", "Node.js"],
-      github: "https://github.com/SimretN",
+      github: "https://github.com/SimretN/u08-business-idea-soundwave-creators",
       live: "https://soundwavecreators.netlify.app",
     },
     {
@@ -66,37 +66,37 @@ function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-gray-50 px-5 sm:px-6 py-14 md:py-16">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="bg-gray-50 px-5 py-14 sm:px-6 md:py-16">
+      <div className="mx-auto max-w-6xl">
         {/* Section Heading */}
-        <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="mb-10 text-center md:mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
             Projects
           </h2>
 
-          <p className="text-gray-500 text-sm md:text-base mt-2">
+          <p className="mt-2 text-sm text-gray-500 md:text-base">
             A selection of applications I've built
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.title}
               className="
-                bg-white
-                border
-                border-gray-200
-                rounded-2xl
-                overflow-hidden
-                shadow-sm
-                hover:shadow-lg
-                hover:-translate-y-1
-                transition
-                duration-300
                 flex
                 flex-col
+                overflow-hidden
+                rounded-2xl
+                border
+                border-gray-200
+                bg-white
+                shadow-sm
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-lg
               "
             >
               {/* Project Image */}
@@ -105,42 +105,42 @@ function Projects() {
                   src={project.image}
                   alt={`${project.title} screenshot`}
                   className="
-                    w-full
                     h-48
-                    sm:h-52
+                    w-full
                     object-cover
-                    hover:scale-105
                     transition
                     duration-300
+                    hover:scale-105
+                    sm:h-52
                   "
                 />
               </div>
 
               {/* Project Content */}
-              <div className="p-5 sm:p-6 flex flex-col flex-1">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
                 {/* Project Title */}
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="mb-3 text-center text-xl font-bold text-gray-900 md:text-2xl">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm md:text-base leading-7 mb-5 text-left">
+                <p className="mb-5 text-left text-sm leading-7 text-gray-600 md:text-base">
                   {project.description}
                 </p>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="mb-6 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
                       className="
-                        text-xs
-                        sm:text-sm
+                        rounded-full
                         bg-purple-100
-                        text-purple-700
                         px-3
                         py-1
-                        rounded-full
+                        text-xs
+                        text-purple-700
+                        sm:text-sm
                       "
                     >
                       {technology}
@@ -149,7 +149,7 @@ function Projects() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap gap-3 mt-auto">
+                <div className="mt-auto flex flex-wrap gap-3">
                   <a
                     href={project.live}
                     target="_blank"
@@ -158,15 +158,15 @@ function Projects() {
                       flex
                       items-center
                       gap-2
+                      rounded-lg
                       bg-purple-600
-                      text-white
                       px-4
                       py-2
-                      rounded-lg
                       text-sm
                       font-medium
-                      hover:bg-purple-700
+                      text-white
                       transition
+                      hover:bg-purple-700
                     "
                   >
                     <FaExternalLinkAlt />
@@ -181,17 +181,17 @@ function Projects() {
                       flex
                       items-center
                       gap-2
+                      rounded-lg
                       border
                       border-gray-300
-                      text-gray-700
                       px-4
                       py-2
-                      rounded-lg
                       text-sm
                       font-medium
+                      text-gray-700
+                      transition
                       hover:border-purple-600
                       hover:text-purple-600
-                      transition
                     "
                   >
                     <FaGithub />
